@@ -1,0 +1,16 @@
+/*
+* @Author: Oscar Carballal Prego
+* @Date:   2017-04-19 15:17:34
+* @Last Modified by:   Oscar Carballal Prego
+* @Last Modified time: 2017-04-19 15:22:19
+*/
+
+.window {
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.toolbar {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #333;
+}
