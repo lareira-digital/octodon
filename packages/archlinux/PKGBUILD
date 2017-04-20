@@ -2,7 +2,7 @@
 _appname=sshedit-gtk
 _reponame=$_appname-master
 pkgname=$_appname-git
-pkgver=3.bc31cc1
+pkgver=4.a68833e
 pkgrel=1
 pkgdesc="GTK+ SSH Configuration Editor (GIT version)"
 arch=('any')

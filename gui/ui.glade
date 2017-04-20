@@ -34,6 +34,16 @@ Author: Oscar Carballal Prego
   <!-- interface-description SSH Configuration Editor -->
   <!-- interface-copyright Esmorga 2017 -->
   <!-- interface-authors Oscar Carballal Prego\t -->
+  <object class="GtkImage" id="add_button">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-add</property>
+  </object>
+  <object class="GtkImage" id="close_button">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-close</property>
+  </object>
   <object class="GtkListStore" id="environment_list">
     <columns>
       <!-- column-name environments -->
@@ -74,6 +84,21 @@ Author: Oscar Carballal Prego
             <property name="can_focus">False</property>
             <property name="resize_mode">immediate</property>
             <child>
+              <object class="GtkButton" id="add_env_button">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="margin_right">8</property>
+                <property name="image">add_button</property>
+                <property name="always_show_image">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
               <object class="GtkComboBox" id="environment_dropdown">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
@@ -102,6 +127,9 @@ Author: Oscar Carballal Prego
                 <property name="margin_left">8</property>
                 <property name="margin_right">8</property>
                 <property name="label" translatable="yes">SSH Config Editor</property>
+                <attributes>
+                  <attribute name="weight" value="bold"/>
+                </attributes>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -130,13 +158,16 @@ Author: Oscar Carballal Prego
             </child>
             <child>
               <object class="GtkButton" id="button_quit">
-                <property name="label" translatable="yes">Quit</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <property name="image">close_button</property>
                 <property name="image_position">right</property>
                 <property name="always_show_image">True</property>
                 <signal name="clicked" handler="quit_application" swapped="no"/>
+                <style>
+                  <class name="circular"/>
+                </style>
               </object>
               <packing>
                 <property name="expand">False</property>

@@ -2,7 +2,7 @@
 
 sshedit-gtk is a configuration editor for SSH config files.
 
-![Screenshot](http://i.imgur.com/0bdeMMI.png)
+![Screenshot](http://i.imgur.com/BRIA9kD.png)
 
 # Features
 
@@ -18,7 +18,9 @@ sshedit-gtk is a configuration editor for SSH config files.
 
 # How to install
 
-## Arch Linux
+## Arch Linux (from AUR)
+
+    $ yaourt -S sshedit-gtk-git
 
 ## Ubuntu
 

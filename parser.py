@@ -2,7 +2,7 @@
 # @Author: Oscar Carballal Prego
 # @Date:   2017-04-18 23:36:16
 # @Last Modified by:   Oscar Carballal Prego
-# @Last Modified time: 2017-04-20 00:29:18
+# @Last Modified time: 2017-04-20 16:07:22
 
 # DISCLAIMER: This parser is heavily based on the work of Emre Yilmaz for
 # the stormssh project.
@@ -56,10 +56,15 @@ class SSHConfigParser():
     def get_host_detail(self, host):
         config_data = self.parse_file()
 
-
-
     def get_environments(self):
+        environments = []
         if not exists(DEFAULT_SSH_ENV_DIR):
+            makedirs(DEFAULT_SSH_ENV_DIR)
             return False
 
-        return walk(DEFAULT_SSH_ENV_DIR)
+        envs = walk(DEFAULT_SSH_ENV_DIR)
+
+        for entry in envs:
+            environments.append(entry[0].split("/")[-1])
+
+        return environments

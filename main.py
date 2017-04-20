@@ -2,11 +2,11 @@
 # @Author: oscarcp
 # @Date:   2017-04-18 23:21:38
 # @Last Modified by:   Oscar Carballal Prego
-# @Last Modified time: 2017-04-20 08:31:41
+# @Last Modified time: 2017-04-20 17:28:49
 
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gdk
+from gi.repository import Gtk, Gdk, Gio
 from gui.handlers import Handler
 
 from parser import SSHConfigParser
@@ -33,6 +33,14 @@ class GUI():
         self.populate_hosts()
         self.populate_envs()
 
+        # menu = Gio.Menu()
+        # # 新建三个菜单选项
+        # item_new = Gio.MenuItem.new("New", "app.new")
+        # item_about = Gio.MenuItem.new("About", "app.about")
+        # item_quit = Gio.MenuItem.new("Quit", "app.quit")
+        # menu.append_item(item_new)
+        # menu.append_item(item_about)
+        # self.set_app_menu(menu)
         # Show the world!
         window = self.builder.get_object("main_window")
         window.show_all()
