@@ -36,4 +36,8 @@ sshedit-gtk is a configuration editor for SSH config files.
 
 MIT License
 
+# Credits
 
+Although this project was in my head for a long time, I have to give thanks to
+[emre](https://github.com/emre) and his [storm project](https://github.com/emre/storm)
+for giving me the inspiration and some ideas on how to start.
