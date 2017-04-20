@@ -2,7 +2,7 @@
 
 sshedit-gtk is a configuration editor for SSH config files.
 
-![Screenshot](http://i.imgur.com/BRIA9kD.png)
+![Screenshot](http://i.imgur.com/k9KUCCl.png)
 
 # Features
 
