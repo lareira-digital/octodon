@@ -1,5 +1,7 @@
 # sshedit-gtk
 
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/esmorga/Lobby)
+
 sshedit-gtk is a configuration editor for SSH config files.
 
 ![Screenshot](http://i.imgur.com/k9KUCCl.png)
