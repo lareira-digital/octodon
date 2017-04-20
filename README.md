@@ -22,13 +22,15 @@ sshedit-gtk is a configuration editor for SSH config files.
 
     $ yaourt -S sshedit-gtk-git
 
-## Ubuntu
-
 ## Manually
+
+    $ git clone https://github.com/esmorga/sshedit-gtk.git
+    $ cd sshedit-gtk
+    $ ./sshedit-gtk
 
 # How to run
 
-    $ python3 main.py
+    $ ./sshedit-gtk
 
 # License
 

@@ -2,17 +2,17 @@
 # @Author: Oscar Carballal Prego
 # @Date:   2017-04-18 23:25:07
 # @Last Modified by:   Oscar Carballal Prego
-# @Last Modified time: 2017-04-20 07:55:58
+# @Last Modified time: 2017-04-20 22:54:12
 
 import gi
 from gi.repository import Gtk
 
-import parser
+from .parser import SSHConfigParser
 
 
 class Handler():
     def __init__(self):
-        self.ssh_config = parser.SSHConfigParser()
+        self.ssh_config = SSHConfigParser()
 
     def quit_application(self, *args):
         Gtk.main_quit(*args)

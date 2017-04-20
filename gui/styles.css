@@ -2,15 +2,24 @@
 * @Author: Oscar Carballal Prego
 * @Date:   2017-04-19 15:17:34
 * @Last Modified by:   Oscar Carballal Prego
-* @Last Modified time: 2017-04-19 15:22:19
+* @Last Modified time: 2017-04-20 22:29:20
 */
 
-.window {
+decoration {
     border-radius: 5px;
-    border: 1px solid #333;
+    border: 1px solid #202020;
+    box-shadow: none;
+}
+
+.round-bottom {
+    border-radius: 0px 0px 5px 5px;
+}
+
+.treeview-padding {
+    padding-right: 20px;
 }
 
 .toolbar {
-    padding-bottom: 8px;
-    border-bottom: 1px solid #333;
+    padding: 0px 8px 0px 8px;
+    background: #404040;
 }
