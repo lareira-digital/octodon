@@ -2,11 +2,11 @@
 # @Author: oscarcp
 # @Date:   2017-04-18 23:21:38
 # @Last Modified by:   Oscar Carballal Prego
-# @Last Modified time: 2017-04-20 07:50:49
+# @Last Modified time: 2017-04-20 08:31:41
 
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk
+from gi.repository import Gtk, Gdk
 from gui.handlers import Handler
 
 from parser import SSHConfigParser
@@ -18,9 +18,22 @@ class GUI():
         self.builder.add_from_file("gui/ui.glade")
         self.builder.connect_signals(Handler())
 
+        # Styles
+        css_provider = Gtk.CssProvider()
+        css = open('gui/styles.css', 'rb')  # rb needed for python 3 support
+        css_data = css.read()
+        css.close()
+        css_provider.load_from_data(css_data)
+        Gtk.StyleContext.add_provider_for_screen(
+            Gdk.Screen.get_default(), css_provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+        )
+
+        # Put the data in place
         self.populate_hosts()
         self.populate_envs()
 
+        # Show the world!
         window = self.builder.get_object("main_window")
         window.show_all()
         Gtk.main()  # run the darn thing
