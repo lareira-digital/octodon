@@ -13,6 +13,16 @@ sshedit-gtk is a configuration editor for SSH config files.
 
 * GTK3+
 * Python 3.5+
+* Python GObject
+* Paramiko
+
+# How to install
+
+## Arch Linux
+
+## Ubuntu
+
+## Manually
 
 # How to run
 

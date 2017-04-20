@@ -1,0 +1,3 @@
+recursive-include gui *.py *.glade *.css
+prune gui/ui.glade~
+exclude __pycache__
