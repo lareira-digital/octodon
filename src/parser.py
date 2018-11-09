@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Author: Oscar Carballal Prego
-# @Date:   2017-04-18 23:36:16
-# @Last Modified by:   Oscar Carballal Prego
-# @Last Modified time: 2017-04-20 16:07:22
-
 # DISCLAIMER: This parser is heavily based on the work of Emre Yilmaz for
 # the stormssh project.
 
@@ -41,7 +35,6 @@ class SSHConfigParser():
 
         for entry in config.__dict__.get("_config"):
             config_data.append(entry)
-
         return config_data
 
     def get_hosts(self):
@@ -55,6 +48,9 @@ class SSHConfigParser():
 
     def get_host_detail(self, host):
         config_data = self.parse_file()
+        for config in config_data:
+            if config['host'][0] == host:
+                return  config['config']
 
     def get_environments(self):
         environments = []

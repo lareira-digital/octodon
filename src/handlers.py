@@ -20,4 +20,5 @@ class Handler():
     def show_host_config(self, treeview, treepath, column):
         selection = treeview.get_selection()
         model, treeiter = selection.get_selected()
-        self.ssh_config.get_host_detail(model[treeiter][0])
+        hostconf = self.ssh_config.get_host_detail(model[treeiter][0])
+        print(hostconf)
