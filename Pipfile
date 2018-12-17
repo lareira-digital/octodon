@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 pygobject = "*"
 paramiko = "*"
+ipdb = "*"
+ipython = "*"
 
 [dev-packages]
 

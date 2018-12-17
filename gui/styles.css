@@ -10,9 +10,19 @@ decoration {
     border: 1px solid #202020;
     box-shadow: none;
 }
-
+.window {
+    border-radius: 5px;
+}
 .round-bottom {
     border-radius: 0px 0px 5px 5px;
+}
+
+.round_left {
+    border-radius: 0px 0px 0px 5px;
+}
+
+.round_right {
+    border-radius: 0px 0px 5px 0px;
 }
 
 .treeview-padding {
@@ -22,4 +32,14 @@ decoration {
 .toolbar {
     padding: 0px 8px 0px 8px;
     background: #404040;
+}
+
+.btn-cancel:hover {
+    background: #ee2222;
+    color: #fff;
+}
+
+.btn-accept {
+    background: #4A90D9;
+    color: #fff;
 }

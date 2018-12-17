@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name="sshedit-gtk",
-    version="0.0.1",
+    version="0.1.0",
     author="Oscar Carballal Prego",
     author_email="oscar@oscarcp.com",
     packages=["."],

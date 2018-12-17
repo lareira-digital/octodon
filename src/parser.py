@@ -62,5 +62,4 @@ class SSHConfigParser():
 
         for entry in envs:
             environments.append(entry[0].split("/")[-1])
-
         return environments
