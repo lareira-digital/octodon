@@ -84,7 +84,7 @@ class SSHEnvironment():
         else:
             sys.exit("Environment does not exist.")
 
-    def remove_environment(self, environment_name):
+    def delete_environment(self, environment_name):
         available_environments = self.get_environments()
         if environment_name in available_environments:
             rmtree(join(DEFAULT_SSH_ENV_DIR, environment_name))

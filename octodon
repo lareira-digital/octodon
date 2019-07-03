@@ -41,7 +41,12 @@ if __name__ == "__main__":
         ssh_config.activate_environment(args.activate)
 
     if args.delete:
-        print(f"Delete environment {args.delete}")
+        confirmation = input(f"Are you sure? This will delete '{args.delete}', its configuration and keys! (yes/NO)")
+        if confirmation == 'yes':
+            ssh_config.delete_environment(args.delete)
+        else:
+            print(f"Deletion of {args.delete} aborted.")
+            sys.exit()
 else:
     logger.error("ERROR: This program has to be run from the command line.")
     sys.exit("This program has to be run from the command line.")
