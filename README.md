@@ -6,6 +6,17 @@ octodon is a configuration editor for SSH config files.
 
 ![Screenshot](http://i.imgur.com/k9KUCCl.png)
 
+# Why?
+
+It may look like octodon is trying to fix a non-existent problem, but it's
+not like that. Imagine that you work for two companies, or you have one laptop
+that you use for both your personal work and the company where you're in.
+
+Now, unfortunately both situation require to use a GitHub account and you have
+in your configuration specific instructions as to the user, port etc. to use
+for your github account, but also for the company and both cannot coexist in
+the configuration file. This program fixes that situation.
+
 # Features
 
 - Environments: It supports multiple separate environments for config files/keys
@@ -14,7 +25,7 @@ octodon is a configuration editor for SSH config files.
 # Requirements
 
 * GTK3+
-* Python 3.5+
+* Python 3.7+
 * Python GObject
 * Paramiko
 

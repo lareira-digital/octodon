@@ -20,8 +20,12 @@ if __name__ == "__main__":
                         help="start the graphical interface")
     parser.add_argument("-l", "--list", action="store_true",
                         help="list all available environments")
-    parser.add_argument("-a", "--activate", help="activate an environment")
-    parser.add_argument("-d", "--delete", help="delete an environment. WARNING: This will delete your keys as well!")
+    parser.add_argument("-c", "--create",
+                        help="create a new environment")
+    parser.add_argument("-a", "--activate",
+                        help="change to the specified environment")
+    parser.add_argument("-r", "--remove",
+                        help="delete an environment. WARNING: This will delete your keys as well!")
     args = parser.parse_args()
 
     if not len(sys.argv) > 1:
@@ -40,12 +44,12 @@ if __name__ == "__main__":
     if args.activate:
         ssh_config.activate_environment(args.activate)
 
-    if args.delete:
-        confirmation = input(f"Are you sure? This will delete '{args.delete}', its configuration and keys! (yes/NO)")
+    if args.remove:
+        confirmation = input(f"Are you sure? This will delete '{args.remove}', its configuration and keys! (yes/NO)")
         if confirmation == 'yes':
-            ssh_config.delete_environment(args.delete)
+            ssh_config.delete_environment(args.remove)
         else:
-            print(f"Deletion of {args.delete} aborted.")
+            print(f"Deletion of {args.remove} aborted.")
             sys.exit()
 else:
     logger.error("ERROR: This program has to be run from the command line.")
