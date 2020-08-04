@@ -41,6 +41,10 @@ if __name__ == "__main__":
         for env in envs:
             print(f"* {env}")
 
+    if args.create:
+        print(f"Creating environment {args.create}...")
+        ssh_config.create_environment(args.create)
+
     if args.activate:
         ssh_config.activate_environment(args.activate)
 

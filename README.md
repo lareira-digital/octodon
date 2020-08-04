@@ -9,10 +9,10 @@ octodon is a configuration editor for SSH config files.
 # Why?
 
 It may look like octodon is trying to fix a non-existent problem, but it's
-not like that. Imagine that you work for two companies, or you have one laptop
+not like that. Imagine that you work for two companies or you have one laptop
 that you use for both your personal work and the company where you're in.
 
-Now, unfortunately both situation require to use a GitHub account and you have
+Now, unfortunately both situations require to use a GitHub account and you have
 in your configuration specific instructions as to the user, port etc. to use
 for your github account, but also for the company and both cannot coexist in
 the configuration file. This program fixes that situation.
@@ -33,17 +33,31 @@ the configuration file. This program fixes that situation.
 
 ## Arch Linux (from AUR)
 
-    $ yaourt -S sshedit-gtk-git
+    $ yay -S octodon-git
 
 ## Manually
 
-    $ git clone https://github.com/esmorga/sshedit-gtk.git
-    $ cd sshedit-gtk
-    $ ./sshedit-gtk
+    $ git clone https://git.sr.ht/~oscarcp/octodon
+    $ cd octodon
+    $ ./octodon
 
-# How to run
+# How to run (terminal)
 
-    $ ./sshedit-gtk
+    $ ./octodon
+    usage: octodon [-h] [-g] [-l] [-c CREATE] [-a ACTIVATE] [-r REMOVE]
+
+    Octodon SSH environments selector and editor.
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      -g, --gui             start the graphical interface
+      -l, --list            list all available environments
+      -c CREATE, --create CREATE
+                            create a new environment
+      -a ACTIVATE, --activate ACTIVATE
+                            change to the specified environment
+      -r REMOVE, --remove REMOVE
+                            delete an environment. WARNING: This will delete your keys as well!
 
 # License
 

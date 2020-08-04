@@ -1,23 +1,15 @@
-# Maintainer: Oscar Carballal Prego <oscar@oscarcp.com>
-_appname=sshedit-gtk
-_reponame=$_appname-master
-pkgname=$_appname-git
-pkgver=4.a68833e
+# Maintainer: Oscar Carballal Prego <oscar.carballal@protonmail.com>
+pkgname=octodon-git
+pkgver=1.0.0
 pkgrel=1
-pkgdesc="GTK+ SSH Configuration Editor (GIT version)"
-arch=('any')
-url="https://github.com/esmorga/sshedit-gtk"
+pkgdesc="SSH environment manager"
+arch=('i686' 'x86_64')
+url="https://git.sr.ht/~oscarcp/octodon"
 license=('MIT')
-depends=('python-pip' 'python-gobject' 'git')
-source=("https://github.com/esmorga/sshedit-gtk/archive/master.zip")
+depends=(python python-gobject python-paramiko)
+source=('git+https://git.sr.ht/~oscarcp/octodon')
+sha256sums=('SKIP')
 md5sums=('SKIP')
 
 package() {
-	cd "$_reponame"
-	python setup.py install --root=$pkgdir/ --optimize=1
-}
-
-pkgver() {
-  cd "$_reponame"
-  echo $(git rev-list --count master).$(git rev-parse --short master)
 }
